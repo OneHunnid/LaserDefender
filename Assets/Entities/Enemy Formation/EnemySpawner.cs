@@ -12,7 +12,6 @@ public class EnemySpawner : MonoBehaviour {
 	private float xmax;
 	private float xmin;
 
-	// Use this for initialization
 	void Start () {
 		float distanceToCamera = transform.position.z - Camera.main.transform.position.z;
 
@@ -31,8 +30,7 @@ public class EnemySpawner : MonoBehaviour {
 	public void OnDrawGizmos() {
 		Gizmos.DrawWireCube(transform.position, new Vector3 (width, height));
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (movingRight) {
 			transform.position += Vector3.right * speed * Time.deltaTime;
